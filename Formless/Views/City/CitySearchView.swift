@@ -14,23 +14,42 @@ class CitySearchView: UIView {
         fatalError("NSCoding not supported")
     }
     
-    
-    
-    var searchView: SearchView?
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        searchView = SearchView(frame: CGRectMake(0, UIApplication.sharedApplication().statusBarFrame.size.height, frame.size.width, 70.0), textContainer: nil)
-        self.addSubview(searchView!)
-    }
-
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect) {
-        // Drawing code
+    // Drawing code
     }
     */
+    
+    
+    
+    
+    var searchView: SearchView?
+    var tableView: TableView?
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        
+        var vOriginY = UIApplication.sharedApplication().statusBarFrame.size.height
+        var vWidth = frame.size.width
+        var vHeight = frame.size.height
+        
+        
+        // Search View
+        var svHeight: CGFloat = 50.0
+        var svRect = CGRectMake(0, vOriginY, vWidth, svHeight)
+        searchView = SearchView(frame: svRect, textContainer: nil)
+        vOriginY += svHeight
+        self.addSubview(searchView!)
+        
+        
+        // Table View
+        var tvHeight: CGFloat = vHeight - vOriginY
+        var tvRect = CGRectMake(0, vOriginY, vWidth, tvHeight)
+        tableView = TableView(frame: tvRect, style: UITableViewStyle.Grouped)
+        self.addSubview(tableView!)
+    }
 
 }

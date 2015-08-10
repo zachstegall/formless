@@ -16,6 +16,9 @@
 		CD3D8AED1B782FD400F7610B /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AEC1B782FD400F7610B /* CityViewController.swift */; };
 		CD3D8AF11B7835B100F7610B /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AF01B7835B100F7610B /* CitySearchView.swift */; };
 		CD3D8AF51B783A1100F7610B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AF41B783A1100F7610B /* SearchView.swift */; };
+		CD3D8AF71B786F0600F7610B /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AF61B786F0600F7610B /* TableView.swift */; };
+		CD3D8AFA1B786F8400F7610B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AF91B786F8400F7610B /* TableViewCell.swift */; };
+		CD3D8AFD1B78716B00F7610B /* CMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D8AFC1B78716B00F7610B /* CMLText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		CD3D8AEC1B782FD400F7610B /* CityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityViewController.swift; path = ViewControllers/City/CityViewController.swift; sourceTree = "<group>"; };
 		CD3D8AF01B7835B100F7610B /* CitySearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CitySearchView.swift; path = Views/City/CitySearchView.swift; sourceTree = "<group>"; };
 		CD3D8AF41B783A1100F7610B /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = Views/SearchView.swift; sourceTree = "<group>"; };
+		CD3D8AF61B786F0600F7610B /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableView.swift; path = Views/TableView.swift; sourceTree = "<group>"; };
+		CD3D8AF91B786F8400F7610B /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = Views/Cells/TableViewCell.swift; sourceTree = "<group>"; };
+		CD3D8AFC1B78716B00F7610B /* CMLText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMLText.swift; path = Utilities/CMLText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				CD3D8AC11B78078C00F7610B /* AppDelegate.swift */,
 				CD3D8AE61B782F5700F7610B /* ViewControllers */,
 				CD3D8AE71B782F6700F7610B /* Views */,
+				CD3D8AFB1B78715200F7610B /* Utilities */,
 				CD3D8ACB1B78078C00F7610B /* Images.xcassets */,
 				CD3D8ACD1B78078C00F7610B /* LaunchScreen.xib */,
 				CD3D8AC31B78078C00F7610B /* Formless.xcdatamodeld */,
@@ -131,8 +138,10 @@
 		CD3D8AE71B782F6700F7610B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CD3D8AEB1B782FB300F7610B /* City */,
 				CD3D8AF41B783A1100F7610B /* SearchView.swift */,
+				CD3D8AF61B786F0600F7610B /* TableView.swift */,
+				CD3D8AEB1B782FB300F7610B /* City */,
+				CD3D8AF81B786F4500F7610B /* Cells */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -151,6 +160,22 @@
 				CD3D8AF01B7835B100F7610B /* CitySearchView.swift */,
 			);
 			name = City;
+			sourceTree = "<group>";
+		};
+		CD3D8AF81B786F4500F7610B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D8AF91B786F8400F7610B /* TableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		CD3D8AFB1B78715200F7610B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D8AFC1B78716B00F7610B /* CMLText.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3D8AC51B78078C00F7610B /* Formless.xcdatamodeld in Sources */,
+				CD3D8AFA1B786F8400F7610B /* TableViewCell.swift in Sources */,
 				CD3D8AC21B78078C00F7610B /* AppDelegate.swift in Sources */,
 				CD3D8AE91B782F9300F7610B /* RootViewController.swift in Sources */,
+				CD3D8AF71B786F0600F7610B /* TableView.swift in Sources */,
 				CD3D8AF11B7835B100F7610B /* CitySearchView.swift in Sources */,
 				CD3D8AF51B783A1100F7610B /* SearchView.swift in Sources */,
 				CD3D8AED1B782FD400F7610B /* CityViewController.swift in Sources */,
+				CD3D8AFD1B78716B00F7610B /* CMLText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +475,7 @@
 				CD3D8AE01B78078C00F7610B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD3D8AE11B78078C00F7610B /* Build configuration list for PBXNativeTarget "FormlessTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +484,7 @@
 				CD3D8AE31B78078C00F7610B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
